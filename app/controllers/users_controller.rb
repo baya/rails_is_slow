@@ -5,7 +5,14 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    GC::Tracer.start_logging(Rails.root.join("tmp/gc.txt").to_s) do
+      @users = User.all.to_a
+      render
+    end
+  end
+
+  def index_erb
+    @users = User.all.to_a
   end
 
   # GET /users/1

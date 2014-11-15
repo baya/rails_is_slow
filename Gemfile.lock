@@ -38,6 +38,7 @@ GEM
     coffee-script-source (1.8.0)
     erubis (2.7.0)
     execjs (2.2.2)
+    gc_tracer (0.3.3)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -116,6 +117,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  gc_tracer
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
